@@ -5,7 +5,10 @@ date: 2025-12-21 16:24 +0800
 author: cerberus
 categories: [博客, 教程]
 tags: [chirpy, giscus, 评论系统, GitHub Pages]
-description: 本文将完整介绍：如何在 Chirpy 主题博客中启用 Giscus 评论系统。
+---
+
+本文将完整介绍：如何在 Chirpy 主题博客中启用 Giscus 评论系统。
+
 ---
 
 ## 前言

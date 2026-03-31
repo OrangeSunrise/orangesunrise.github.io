@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 # source "https://rubygems.org"
-source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
-gem "jekyll-theme-chirpy", "~> 7.4", ">= 7.4.1"
+source "https://mirrors.aliyun.com/rubygems/"
+
+gem "jekyll-theme-chirpy", "~> 7.5"
 
 gem "html-proofer", "~> 5.0", group: :test
 
-platforms :mingw, :x64_mingw, :mswin, :jruby do
+platforms :windows, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end

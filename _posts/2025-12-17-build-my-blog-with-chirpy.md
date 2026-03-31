@@ -5,11 +5,12 @@ date: 2025-12-17 09:52 +0800
 author: cerberus
 categories: [博客, 教程]
 tags: [jekyll, chirpy]
-description: 使用 Chirpy 主题从零搭建并部署个人博客，包含环境准备、依赖安装、核心配置文件说明及发布流程。
 pin: true
 ---
 
 本文记录了使用 **Jekyll + Chirpy** 主题搭建并部署个人博客的完整过程，涵盖本地开发环境配置、核心配置文件修改以及博客发布流程，适合作为一份可复用的实践指南。
+
+---
 
 ## 实现效果
 

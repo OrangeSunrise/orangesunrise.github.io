@@ -5,12 +5,11 @@ date: 2025-12-20 20:23 +0800
 author: cerberus
 categories: [软件安装, 教程]
 tags: [wsl2, docker]
-description: 本文基于WSL2 + Ubuntu 22.04环境，使用Docker官方apt仓库安装Docker Engine，并针对WSL2中常见的Docker Hub访问失败问题给出稳定解决方案。
 ---
 
 本文基于 **WSL2 + Ubuntu 22.04** 环境，使用 **Docker 官方 apt 仓库** 安装 Docker Engine，并针对 **WSL2 中常见的 Docker Hub 访问失败问题** 给出稳定解决方案。
 
-------
+---
 
 ## 一、前提条件确认（非常重要）
 
