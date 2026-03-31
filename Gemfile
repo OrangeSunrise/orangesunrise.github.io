@@ -2,7 +2,7 @@
 
 # source "https://rubygems.org"
 
-source "https://mirrors.aliyun.com/rubygems/"
+source "https://gems.ruby-china.com/"
 
 gem "jekyll-theme-chirpy", "~> 7.5"
 
