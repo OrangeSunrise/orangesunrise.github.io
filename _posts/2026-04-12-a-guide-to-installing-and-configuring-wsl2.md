@@ -12,16 +12,6 @@ description:
 
 ---
 
-## 目录
-
-1. [Win11 安装 WSL2](#1-win11-安装-wsl2)
-2. [离线安装 Ubuntu 24.04](#2-离线安装-ubuntu-2404)
-3. [Ubuntu 基础配置](#3-ubuntu-基础配置)
-4. [安装 Git 并配置 GitHub](#4-安装-git-并配置-github)
-5. [离线安装 VS Code Server](#5-离线安装-vs-code-server)
-
----
-
 ## 1. Win11 安装 WSL2
 
 ### 1.1 开启虚拟化功能
