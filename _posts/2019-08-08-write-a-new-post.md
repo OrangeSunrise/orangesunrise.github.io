@@ -2,16 +2,16 @@
 title: 新建一篇文章
 author: cotes
 date: 2019-08-08 14:10:00 +0800
-categories: [博客, 教程]
-tags: [写作]
+categories: [博客, Chirpy]
+tags: [writing]
 render_with_liquid: false
-description: 本教程将指导你如何在Chirpy模板中编写一篇文章。即使你之前使用过Jekyll，也非常值得阅读，因为Chirpy的许多功能都依赖于特定变量的正确设置。
+description: 
 ---
+
+> 本教程将指导你如何在 **Chirpy** 模板中编写一篇文章。即使你之前使用过 Jekyll，也非常值得阅读，因为 Chirpy 的许多功能都依赖于特定变量的正确设置。
 
 > 官方文章翻译版，版本：chirpy-7.4.1
 {: .prompt-info }
-
-本教程将指导你如何在 **Chirpy** 模板中编写一篇文章。即使你之前使用过 Jekyll，也非常值得阅读，因为 Chirpy 的许多功能都依赖于特定变量的正确设置。
 
 ## 命名与路径
 

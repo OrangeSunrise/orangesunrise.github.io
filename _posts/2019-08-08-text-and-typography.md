@@ -3,8 +3,8 @@ title: 文本和格式
 description: 示例包括文本、排版、数学公式、图表、流程图、图片、视频等。
 author: cotes
 date: 2019-08-08 11:33:00 +0800
-categories: [博客, 演示]
-tags: [格式]
+categories: [博客, Chirpy]
+tags: [typography]
 math: true
 mermaid: true
 ---

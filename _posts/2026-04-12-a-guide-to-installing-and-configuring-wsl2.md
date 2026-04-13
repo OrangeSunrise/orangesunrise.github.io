@@ -3,7 +3,7 @@ layout: post
 title: WSL2 安装与配置指南
 date: 2026-04-12 18:26 +0800
 author: cerberus
-categories: [系统安装, 教程]
+categories: [系统安装, ubuntu24.04-wsl2-git-vscode]
 tags: [ubuntu24.04, wsl2, git, vscode]
 description:
 ---

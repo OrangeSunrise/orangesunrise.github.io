@@ -3,11 +3,11 @@ layout: post
 title: 安装 Docker (in WSL2)
 date: 2025-12-20 20:23 +0800
 author: cerberus
-categories: [软件安装, 教程]
+categories: [软件安装, docker]
 tags: [wsl2, docker]
 ---
 
-本文基于 **WSL2 + Ubuntu 22.04** 环境，使用 **Docker 官方 apt 仓库** 安装 Docker Engine，并针对 **WSL2 中常见的 Docker Hub 访问失败问题** 给出稳定解决方案。
+> 本文基于 **WSL2 + Ubuntu 22.04** 环境，使用 **Docker 官方 apt 仓库** 安装 Docker Engine，并针对 **WSL2 中常见的 Docker Hub 访问失败问题** 给出稳定解决方案。
 
 ---
 

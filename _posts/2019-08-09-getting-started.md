@@ -1,13 +1,13 @@
 ---
 title: 开始教程
-description: >-
-  在本全面的概述中开始学习 Chirpy 的基础知识。
-  您将学习如何安装、配置和使用您的第一个基于 Chirpy 的网站，以及如何将其部署到网络服务器上。
+description: 
 author: cotes
 date: 2019-08-09 20:55:00 +0800
-categories: [博客, 教程]
+categories: [博客, Chirpy]
 tags: [getting started]
 ---
+
+> 在本全面的概述中开始学习 Chirpy 的基础知识。您将学习如何安装、配置和使用您的第一个基于 Chirpy 的网站，以及如何将其部署到网络服务器上。
 
 > 官方文章翻译版，版本：chirpy-7.4.1
 {: .prompt-info }

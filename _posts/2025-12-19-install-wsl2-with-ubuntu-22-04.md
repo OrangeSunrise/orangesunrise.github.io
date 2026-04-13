@@ -3,11 +3,11 @@ layout: post
 title: 安装 WSL2 和 Ubuntu 22.04
 date: 2025-12-19 10:46 +0800
 author: cerberus
-categories: [软件安装, 教程]
+categories: [系统安装, wsl2-ubuntu22.04]
 tags: [wsl2, ubuntu22.04]
 ---
 
-本文记录在 **Windows 11** 环境下，通过 **离线方式** 安装 **WSL2 + Ubuntu 22.04**，并完成基础配置与 VS Code 联动，适合网络受限或希望可控安装流程的用户。
+> 本文记录在 **Windows 11** 环境下，通过 **离线方式** 安装 **WSL2 + Ubuntu 22.04**，并完成基础配置与 VS Code 联动，适合网络受限或希望可控安装流程的用户。
 
 ---
 
