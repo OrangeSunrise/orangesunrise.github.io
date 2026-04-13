@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 博客搭建全流程（Jekyll + Chirpy）
+title: Chirpy博客搭建全流程
 date: 2025-12-17 09:52 +0800
 author: cerberus
-categories: [博客, 教程]
+categories: [博客, Chirpy]
 tags: [jekyll, chirpy]
 pin: true
 ---
 
-本文记录了使用 **Jekyll + Chirpy** 主题搭建并部署个人博客的完整过程，涵盖本地开发环境配置、核心配置文件修改以及博客发布流程，适合作为一份可复用的实践指南。
+> 本文记录了使用 **Jekyll + Chirpy** 主题搭建并部署个人博客的完整过程，涵盖本地开发环境配置、核心配置文件修改以及博客发布流程，适合作为一份可复用的实践指南。
 
 ---
 
@@ -24,108 +24,18 @@ _博客首页效果预览_
 
 ## 开发环境
 
-| 项目         | 版本 / 说明         |
-| ------------ | ------------------- |
-| OS           | Windows 11          |
-| Linux 子系统 | WSL2 + Ubuntu 22.04 |
-| 编辑器       | VS Code             |
-| 容器         | Docker              |
-| Python       | 3.10                |
-
-> 本文涉及到的软件安装包均已打包至百度网盘，[下载链接](https://pan.baidu.com/s/1SDgtnMOO6aI4vtU4yoNrDg?pwd=q4p3 "点击跳转")。
-{: .prompt-tip }
+| 项目         | 版本 / 说明             |
+| ------------ | ----------------------- |
+| OS           | Windows 11              |
+| Linux 子系统 | WSL2 + Ubuntu 24.04     |
+| 编辑器       | VS Code                 |
+| git          | 在Ubuntu 24.04中安装git |
 
 ## 环境准备
 
-### WSL2 + Ubuntu 22.04
+### WSL2 + Ubuntu 24.04 + Git + VSCode
 
-安装教程：[链接](https://orangesunrise.github.io/posts/install-wsl2-with-ubuntu-22-04/ "点击跳转")
-
-### Python
-
-Python 主要用于辅助脚本及工具，安装完成后确保：
-
-```bash
-python --version
-```
-
-安装教程：[链接](https://dblab.xmu.edu.cn/blog/2853/#more-2853 "点击跳转")
-
-### Docker
-
-Docker 并非 Jekyll 的强依赖，但在后续构建或 CI 场景中会非常有用，建议提前安装。
-
-安装教程：[链接](https://orangesunrise.github.io/posts/install-docker-in-wsl2/ "点击跳转")
-
-## 基础依赖安装
-
-Chirpy 基于 **Jekyll**，需要 Ruby、Bundler 及 Node.js 等环境支持。
-
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y git curl build-essential libssl-dev libreadline-dev zlib1g-dev
-```
-
-## Ruby 安装（源码方式）
-
-[下载](https://www.ruby-lang.org/zh_cn/downloads/ "点击跳转官方网站")并解压 Ruby 源码：
-
-```bash
-cd ~
-tar -xzvf ruby-3.4.7.tar.gz
-cd ruby-3.4.7
-```
-
-安装编译依赖：
-
-```bash
-sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev libffi-dev libyaml-dev
-```
-
-配置并编译安装：
-
-```bash
-./configure --prefix=$HOME/.rbenv/versions/3.4.7
-make -j$(nproc)
-make install
-```
-
-> `--prefix` 用于指定安装路径，便于配合 rbenv 统一管理。
-{: .prompt-tip }
-
-注册到 rbenv：
-
-```bash
-rbenv rehash
-rbenv global 3.4.7
-ruby -v
-```
-
-## Bundler 与 Jekyll
-
-```bash
-gem install bundler jekyll
-bundle -v
-jekyll -v
-```
-
-## Node.js
-
-Chirpy 的前端资源构建依赖 Node.js：
-
-```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
-node -v
-npm -v
-```
-
-## wsl2中的git配置
-
-在开始之前，请确保你已经在 **WSL2 / Linux 环境** 中完成了 Git 的基础配置（用户名、邮箱、SSH 或 HTTPS 登录方式等）。 
-这一步只需要做一次，后续所有博客操作都会用到 Git。
-
-安装教程：[链接](https://orangesunrise.github.io/posts/git-basic-configuration-in-wsl2/ "点击跳转")
+安装教程：[链接](https://orangesunrise.github.io/posts/a-guide-to-installing-and-configuring-wsl2/ "点击跳转")
 
 ## 项目拉取
 
@@ -193,9 +103,7 @@ Use this template → Create a new repository
 <你的GitHub用户名>.github.io
 ```
 
-> 必须：
-> - 全小写
-> - 和 GitHub 用户名一模一样
+> 必须：1. 全小写；2. 和 GitHub 用户名一模一样
 {: .prompt-warning }
 
 > ✔ 这样 GitHub Pages 才能自动生效
@@ -265,40 +173,75 @@ Your branch is up to date with 'origin/main'.
 
 说明拉取成功 ✅
 
-## 项目初始化
+## 安装运行依赖
 
-进入博客仓库并安装依赖：
-
-```bash
-cd ~/web_project/orangesunrise.github.io
-bundle install
-```
-
-> 若遇到权限问题，可使用 `bundle install --path vendor/bundle`。
-{: .prompt-warning }
-
-前端依赖（可选）：
-
-```bash
-npm install
-```
-
-> 即使出现警告或错误，通常不影响博客正常运行。
+> 以下操作均在 WSL2 Ubuntu 终端中执行。
 {: .prompt-info }
 
-## 本地预览
+### 1. 安装 Ruby 和编译工具
+
+Jekyll 依赖 Ruby，部分插件需要 C 编译器，因此先安装 Ruby 及基础构建工具：
 
 ```bash
+sudo apt update
+sudo apt install ruby-full build-essential zlib1g-dev -y
+```
+
+### 2. 配置用户级 Gem 安装路径
+
+**不要用 `sudo` 全局安装 Gem**，否则可能破坏系统组件或引发权限冲突。通过环境变量将 Gem 安装到用户家目录：
+
+```bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 3. 换源并安装 Jekyll / Bundler
+
+国内网络环境下，建议将 RubyGems 源替换为国内镜像：
+
+```bash
+# 换源
+gem sources --remove https://rubygems.org/
+gem sources -a https://gems.ruby-china.com/
+gem sources  # 验证源已切换
+
+# 安装 Jekyll 和 Bundler（不加 sudo）
+gem install jekyll bundler
+```
+
+> 💡 此步骤可能需要几分钟，因为部分 Gem 需要现场编译 C 扩展。
+{: .prompt-tip }
+
+### 4. 验证安装
+
+```bash
+ruby -v
+gem -v
+bundler -v
+jekyll -v
+```
+
+### 5. 安装项目依赖并启动本地预览
+
+进入项目目录，安装 Gemfile 中声明的依赖后启动服务：
+
+```bash
+cd /home/jianhui/web_project/orangesunrise.github.io
+
+bundle install
+
 bundle exec jekyll serve
 ```
 
-默认访问地址：`http://127.0.0.1:4000`
+启动成功后，浏览器访问 `http://localhost:4000` 即可预览博客。
 
-WSL2 场景下如无法访问，可使用：
+> 后续每次写文章前，先本地预览确认效果正常，再推送到 GitHub。
+{: .prompt-tip }
 
-```bash
-bundle exec jekyll serve --host 0.0.0.0
-```
+
 
 ## 核心配置文件一览
 
