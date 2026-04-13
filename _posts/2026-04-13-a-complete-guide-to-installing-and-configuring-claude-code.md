@@ -14,12 +14,12 @@ description:
 
 ## nodejs安装
 
-[npm-pnpm 安装指南 | Cerberus](https://orangesunrise.github.io/posts/npm-pnpm-installation-guide/)
+[npm-pnpm 安装指南](https://orangesunrise.github.io/posts/npm-pnpm-installation-guide/)
 
 ## git安装
 
-- win11: https://orangesunrise.github.io/posts/windows-11-git-installation/
-- wsl2: https://orangesunrise.github.io/posts/git-basic-configuration-in-wsl2/
+- [win11](https://orangesunrise.github.io/posts/windows-11-git-installation/)
+- [wsl2](https://orangesunrise.github.io/posts/git-basic-configuration-in-wsl2/)
 
 ## claude code安装
 
@@ -39,7 +39,7 @@ npm install -g @anthropic-ai/claude-code
 
 ## 方案2 使用qwen模型配置
 
-> 阿里云官方教程：https://help.aliyun.com/zh/model-studio/claude-code#2bc57cc37cxs2
+> [阿里云官方教程](https://help.aliyun.com/zh/model-studio/claude-code#2bc57cc37cxs2)
 
 > 这里以qwen 3.6 plus模型为例。
 
@@ -65,7 +65,7 @@ npm install -g @anthropic-ai/claude-code
 
 1. **打开配置文件**（Ubuntu 默认使用 Bash）：
 
-   ```Bash
+   ```bash
    nano ~/.bashrc
    ```
 
@@ -73,7 +73,7 @@ npm install -g @anthropic-ai/claude-code
 
 2. **在文件末尾添加以下内容**：
 
-   ```Bash
+   ```bash
    # Jianhui Claude Configuration
    export ANTHROPIC_BASE_URL=https://dashscope.aliyuncs.com/apps/anthropic
    export ANTHROPIC_API_KEY="你的实际Key内容"
@@ -86,7 +86,7 @@ npm install -g @anthropic-ai/claude-code
 
 4. **使配置立即生效**：
 
-   ```Bash
+   ```bash
    source ~/.bashrc
    ```
 
@@ -115,7 +115,7 @@ npm install -g @anthropic-ai/claude-code
 
 3. 打开一个新的 CMD 窗口，运行以下命令，检查环境变量是否生效：
 
-   ```cmd
+   ```powershell
    echo %ANTHROPIC_API_KEY%
    echo %ANTHROPIC_BASE_URL%
    echo %ANTHROPIC_MODEL%
@@ -125,7 +125,7 @@ npm install -g @anthropic-ai/claude-code
 
 进入项目目录，在终端执行`claude`命令。
 
-```cmd
+```powershell
 claude
 ```
 
