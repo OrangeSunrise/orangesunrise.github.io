@@ -326,3 +326,12 @@ agent: Explore
 | `claude agents` | 列出子 Agent |
 
 **常用标志：** `--model`、`--effort`、`--permission-mode`、`--bare`、`--remote`、`--worktree`、`--add-dir`
+
+---
+
+## 五、其他参考文档
+
+- [Claude Code拓展阅读](https://ucn9uf8devd7.feishu.cn/wiki/EF5zw69MXijTpLkrGdycQBQqnCc)
+- [省钱秘笈](https://scn3m6p680p5.feishu.cn/docx/HskCdORZ4oOqYuxO8xXcuJb5nsg)
+- [入门指南](https://scn3m6p680p5.feishu.cn/docx/KhRQdGaDpoQauDxSruIcAluinrf)
+- [实战技巧](https://scn3m6p680p5.feishu.cn/docx/LJYDdU3fooStsmxVwd7cgNCpnNf)
