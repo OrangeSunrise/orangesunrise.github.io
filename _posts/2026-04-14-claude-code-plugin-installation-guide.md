@@ -37,7 +37,10 @@ claude
 
 ```bash
 # 1. 添加官方插件市场
+# ssh添加方式
 /plugin marketplace add anthropic/skills
+# 或者使用http添加方式
+/plugin marketplace add https://github.com/anthropics/skills.git
 
 # 2. 安装文档处理全家桶（Word、PPT、Excel、PDF）
 /plugin install document-skills@anthropic-skills
