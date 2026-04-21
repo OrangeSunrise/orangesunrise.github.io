@@ -40,7 +40,7 @@ description:
 
 在创建新项目之前，顺手把 `uv` 升到最新版，确保能用上最新的依赖解析算法：
 
-```PowerShell
+```shell
 uv self update
 ```
 
@@ -50,7 +50,7 @@ uv self update
 
 现在我们重新建立项目。为了防止它默认又去抓你系统里的 Python 3.10，我们在初始化时就直接**明确指定 Python 版本**：
 
-```PowerShell
+```shell
 # 1. 初始化项目，并明确指定使用 python 3.12
 uv init ai-labs --python 3.12
 
@@ -64,7 +64,7 @@ cd .\ai-labs\
 
 现在文件夹里是最纯净的 `uv` 模板了。直接运行下面的命令，`uv` 会自动为你下载 Python 3.12 并配置好包含 Intel XPU 仓库的 PyTorch：
 
-```PowerShell
+```shell
 uv add torch torchvision torchaudio --index https://download.pytorch.org/whl/xpu
 ```
 
@@ -78,7 +78,7 @@ uv add torch torchvision torchaudio --index https://download.pytorch.org/whl/xpu
 
 在终端中运行以下命令。这会将 `ipykernel`（Jupyter 的 Python 内核）作为**开发依赖**添加到你的项目中：
 
-```powershell
+```shell
 uv add ipykernel --dev
 ```
 
@@ -113,7 +113,7 @@ uv add ipykernel --dev
 
 在新建的 `test_xpu.ipynb` 的第一个代码块（Cell）中，贴入以下代码并点击运行（快捷键 `Shift + Enter`）：
 
-```Python
+```python
 import torch
 
 print(f"PyTorch 版本: {torch.__version__}")
@@ -143,13 +143,13 @@ else:
 
 因为我们需要画图展示手写数字，需要用到 `matplotlib` 库。请在 VS Code 的终端里执行下面这行命令把它装上：
 
-```powershell
+```shell
 uv add matplotlib --dev
 ```
 
 打开你的 `test_xpu.ipynb`，你可以新建几个代码块（Cell），或者直接把下面这一整段代码贴进一个大代码块里，然后点击运行（快捷键 `Shift + Enter`）：
 
-```Python
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
