@@ -5,7 +5,7 @@ date: 2026-04-21 09:34 +0800
 author: cerberus
 categories: [Python, uv]
 tags: [Python, uv]
-description: 
+description: 本文系统讲解使用 uv 管理 Python 版本、环境与项目依赖的方法。
 ---
 
 > **适用场景**：在 Ubuntu 或 Windows 上使用 `uv` 安装与管理 Python、管理项目依赖、配置镜像源与常见问题排查。
@@ -32,12 +32,12 @@ description:
 
 `uv` 是由 Astral 开发的现代 Python 包管理器与项目管理工具，核心理念是“**项目即环境**”。相比传统的 `pip + venv` 组合，`uv` 提供了更快的安装速度、更可靠的环境隔离和更清晰的项目管理方式。
 
-| **动作** | **传统方式 (pip/venv)** | **现代方式 (uv Project)** |
-| --- | --- | --- |
-| 创建环境 | `python -m venv .venv` | 无需手动创建，`uv run` 或 `uv add` 时自动生成 |
-| 记录包 | `pip freeze > requirements.txt` | **自动记录**在 `pyproject.toml` 和 `uv.lock` |
-| 运行代码 | 必须先 `activate` 虚拟环境 | 直接 `uv run`，无需手动激活 |
-| 切换版本 | 重新创建虚拟环境 | `uv python pin 3.x` 然后 `uv sync` |
+| **动作** | **传统方式 (pip/venv)**         | **现代方式 (uv Project)**                     |
+| -------- | ------------------------------- | --------------------------------------------- |
+| 创建环境 | `python -m venv .venv`          | 无需手动创建，`uv run` 或 `uv add` 时自动生成 |
+| 记录包   | `pip freeze > requirements.txt` | **自动记录**在 `pyproject.toml` 和 `uv.lock`  |
+| 运行代码 | 必须先 `activate` 虚拟环境      | 直接 `uv run`，无需手动激活                   |
+| 切换版本 | 重新创建虚拟环境                | `uv python pin 3.x` 然后 `uv sync`            |
 
 ---
 
@@ -119,12 +119,12 @@ uv --version
 
 如果希望统一管理 `uv` 相关的缓存、Python 解释器和工具路径，可设置以下系统环境变量：
 
-| **变量名** | **变量值** | **作用** |
-| --- | --- | --- |
-| `UV_CACHE_DIR` | `D:\uv_data\cache` | 包缓存目录，避免占用系统盘 |
-| `UV_DEFAULT_INDEX` | `https://mirrors.aliyun.com/pypi/simple/` | 国内镜像源，加速下载 |
-| `UV_PYTHON_INSTALL_DIR` | `D:\uv_data\python` | `uv python install` 下载的 Python 解释器存放位置 |
-| `UV_TOOL_DIR` | `D:\uv_data\tools` | `uv tool install` 安装的工具存放位置 |
+| **变量名**              | **变量值**                                | **作用**                                         |
+| ----------------------- | ----------------------------------------- | ------------------------------------------------ |
+| `UV_CACHE_DIR`          | `D:\uv_data\cache`                        | 包缓存目录，避免占用系统盘                       |
+| `UV_DEFAULT_INDEX`      | `https://mirrors.aliyun.com/pypi/simple/` | 国内镜像源，加速下载                             |
+| `UV_PYTHON_INSTALL_DIR` | `D:\uv_data\python`                       | `uv python install` 下载的 Python 解释器存放位置 |
+| `UV_TOOL_DIR`           | `D:\uv_data\tools`                        | `uv tool install` 安装的工具存放位置             |
 
 > **注意**：若使用 VPN，建议选择阿里云镜像源，因为部分大学镜像源可能会屏蔽海外节点。
 
@@ -491,13 +491,13 @@ uv run python --version
 
 本文各章节已嵌入对应的官方文档链接，方便随时查阅。以下为完整索引：
 
-| **主题** | **对应章节** | **官方文档链接** |
-| --- | --- | --- |
-| 安装 | 第 2 节 | [Installation](https://docs.astral.sh/uv/getting-started/installation/) |
-| 镜像源 | 第 3 节 | [Indexes](https://docs.astral.sh/uv/concepts/indexes/) · [Environment Variables](https://docs.astral.sh/uv/reference/environment/) |
-| Python 管理 | 第 4 节 | [Install Python](https://docs.astral.sh/uv/guides/install-python/) |
-| 项目与依赖 | 第 5 节 | [Projects](https://docs.astral.sh/uv/getting-started/projects/) · [Dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/) · [CLI Reference](https://docs.astral.sh/uv/reference/cli/) |
-| GitHub 仓库 | — | [astral-sh/uv](https://github.com/astral-sh/uv) |
+| **主题**    | **对应章节** | **官方文档链接**                                                                                                                                                                                        |
+| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 安装        | 第 2 节      | [Installation](https://docs.astral.sh/uv/getting-started/installation/)                                                                                                                                 |
+| 镜像源      | 第 3 节      | [Indexes](https://docs.astral.sh/uv/concepts/indexes/) · [Environment Variables](https://docs.astral.sh/uv/reference/environment/)                                                                      |
+| Python 管理 | 第 4 节      | [Install Python](https://docs.astral.sh/uv/guides/install-python/)                                                                                                                                      |
+| 项目与依赖  | 第 5 节      | [Projects](https://docs.astral.sh/uv/getting-started/projects/) · [Dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/) · [CLI Reference](https://docs.astral.sh/uv/reference/cli/) |
+| GitHub 仓库 | —            | [astral-sh/uv](https://github.com/astral-sh/uv)                                                                                                                                                         |
 
 > `uv` 更新频繁，如遇行为变化，建议以[官方文档首页](https://docs.astral.sh/uv/)为准。
 

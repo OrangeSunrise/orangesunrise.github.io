@@ -5,6 +5,7 @@ date: 2025-12-21 16:24 +0800
 author: cerberus
 categories: [博客, Chirpy]
 tags: [chirpy, giscus, 评论系统]
+description: 本文演示在 Chirpy 博客中接入并配置 Giscus 评论系统。
 ---
 
 > 本文将完整介绍：如何在 Chirpy 主题博客中启用 Giscus 评论系统。

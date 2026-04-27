@@ -5,7 +5,7 @@ date: 2019-08-08 14:10:00 +0800
 categories: [博客, Chirpy]
 tags: [writing]
 render_with_liquid: false
-description: 
+description: 本文介绍在 Chirpy 中创建与发布新文章的完整写作流程。
 ---
 
 > 本教程将指导你如何在 **Chirpy** 模板中编写一篇文章。即使你之前使用过 Jekyll，也非常值得阅读，因为 Chirpy 的许多功能都依赖于特定变量的正确设置。
@@ -295,11 +295,11 @@ image:
 
 以下表格展示了如何从给定的视频/音频 URL 中获取我们所需的两个参数，并且您还能了解到当前支持的视频平台。
 
-| Video URL                                                    | Platform   | ID                       |
-| ------------------------------------------------------------ | ---------- | :----------------------- |
-| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube`  | `H-B46URT4mg`            |
-| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211) | `twitch`   | `1634779211`             |
-| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf`           |
+| Video URL                                                                                                                  | Platform   | ID                       |
+| -------------------------------------------------------------------------------------------------------------------------- | ---------- | :----------------------- |
+| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg)                         | `youtube`  | `H-B46URT4mg`            |
+| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211)                                 | `twitch`   | `1634779211`             |
+| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf)                         | `bilibili` | `BV1Q44y1B7Wf`           |
 | [https://www.open.**spotify**.com/track/**3OuMIIFP5TxM8tLXMWYPGV**](https://open.spotify.com/track/3OuMIIFP5TxM8tLXMWYPGV) | `spotify`  | `3OuMIIFP5TxM8tLXMWYPGV` |
 
 Spotify 还支持一些额外的参数：

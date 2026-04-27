@@ -5,7 +5,7 @@ date: 2026-04-13 14:33 +0800
 author: cerberus
 categories: [软件安装, npm-pnpm]
 tags: [npm, pnpm]
-description:
+description: 本文介绍 npm 与 pnpm 的安装、换源及常见问题处理方法。
 ---
 
 ## 一、Ubuntu 22.04 安装 npm
@@ -149,12 +149,12 @@ npm config set registry https://registry.npmjs.org/
 
 ### 常用镜像源
 
-| 源名称 | 地址 |
-|--------|------|
-| 官方默认 | `https://registry.npmjs.org/` |
-| 淘宝镜像 | `https://registry.npmmirror.com/` |
-| 腾讯云 | `https://mirrors.cloud.tencent.com/npm/` |
-| 华为云 | `https://mirrors.huaweicloud.com/repository/npm/` |
+| 源名称   | 地址                                              |
+| -------- | ------------------------------------------------- |
+| 官方默认 | `https://registry.npmjs.org/`                     |
+| 淘宝镜像 | `https://registry.npmmirror.com/`                 |
+| 腾讯云   | `https://mirrors.cloud.tencent.com/npm/`          |
+| 华为云   | `https://mirrors.huaweicloud.com/repository/npm/` |
 
 ### 查看 npm 配置
 

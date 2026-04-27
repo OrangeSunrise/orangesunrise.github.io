@@ -5,6 +5,7 @@ date: 2025-12-21 11:02 +0800
 author: cerberus
 categories: [软件安装, git]
 tags: [wsl2, git]
+description: 本文整理 WSL2 环境下 Git 的基础安装与常用配置。
 ---
 
 > 本文将以 Ubuntu（WSL2） 为例，完整介绍 Git 的基础配置流程。

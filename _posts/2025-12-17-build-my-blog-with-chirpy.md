@@ -5,6 +5,7 @@ date: 2025-12-17 09:52 +0800
 author: cerberus
 categories: [博客, Chirpy]
 tags: [jekyll, chirpy]
+description: 本文记录从本地搭建到上线部署的 Chirpy 博客实践流程。
 pin: true
 ---
 

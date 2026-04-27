@@ -5,6 +5,7 @@ date: 2025-12-19 10:46 +0800
 author: cerberus
 categories: [系统安装, wsl2-ubuntu22.04]
 tags: [wsl2, ubuntu22.04]
+description: 本文介绍在 Windows 11 上离线安装 WSL2 与 Ubuntu 22.04 的步骤。
 ---
 
 > 本文记录在 **Windows 11** 环境下，通过 **离线方式** 安装 **WSL2 + Ubuntu 22.04**，并完成基础配置与 VS Code 联动，适合网络受限或希望可控安装流程的用户。

@@ -5,7 +5,7 @@ date: 2026-04-12 18:26 +0800
 author: cerberus
 categories: [系统安装, ubuntu24.04-wsl2-git-vscode]
 tags: [ubuntu24.04, wsl2, git, vscode]
-description:
+description: 本文提供 Win11 下 WSL2、Ubuntu、Git 与 VS Code 的安装配置流程。
 ---
 
 > 本文档涵盖：Win11 安装 WSL2 → 离线安装 Ubuntu 24.04 → 安装 Git → 离线安装 VS Code Server

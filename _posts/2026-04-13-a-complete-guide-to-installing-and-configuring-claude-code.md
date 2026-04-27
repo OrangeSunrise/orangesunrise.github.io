@@ -5,7 +5,7 @@ date: 2026-04-13 16:58 +0800
 author: cerberus
 categories: [Claude, Claude Code]
 tags: [claude, claude code]
-description:
+description: 本文汇总 Claude Code 在 VS Code 环境中的安装与基础配置步骤。
 ---
 
 ## vscode安装

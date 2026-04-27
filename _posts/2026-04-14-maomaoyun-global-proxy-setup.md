@@ -5,7 +5,7 @@ date: 2026-04-14 08:41 +0800
 author: cerberus
 categories: [猫猫云]
 tags: [maomaoyun, vpn]
-description:
+description: 本文演示猫猫云开启全局代理并验证终端连通性的过程。
 ---
 
 ![image-20260414082300040](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199image-20260414082300040.png)

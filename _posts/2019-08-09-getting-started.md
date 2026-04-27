@@ -1,6 +1,6 @@
 ---
 title: 开始教程
-description: 
+description: 本文带你快速完成 Chirpy 站点初始化、配置与基础使用。
 author: cotes
 date: 2019-08-09 20:55:00 +0800
 categories: [博客, Chirpy]

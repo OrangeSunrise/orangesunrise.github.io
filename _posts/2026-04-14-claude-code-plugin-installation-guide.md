@@ -5,7 +5,7 @@ date: 2026-04-14 09:21 +0800
 author: cerberus
 categories: [Claude, Claude Code]
 tags: [claude, claude skills]
-description:
+description: 本文介绍 Claude Code 文档处理插件的安装条件与操作步骤。
 ---
 
 > 这个插件的地址在国外，需要挂vpn，并且开启全局代理，保证终端可以`ping www.google.com`成功。
