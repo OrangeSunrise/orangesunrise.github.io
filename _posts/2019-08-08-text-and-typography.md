@@ -56,10 +56,10 @@ mermaid: true
 
 ### 待办事项列表（ToDo list）
 
--  任务
-  -  步骤 1
-  -  步骤 2
-  -  步骤 3
+- 任务
+  - 步骤 1
+  - 步骤 2
+  - 步骤 3
 
 ### 描述列表（Description list）
 
@@ -81,13 +81,10 @@ Moon
 
 > 一个 `tip` 类型提示的示例。
 {: .prompt-tip }
-
 > 一个 `info` 类型提示的示例。
 {: .prompt-info }
-
 > 一个 `warning` 类型提示的示例。
 {: .prompt-warning }
-
 > 一个 `danger` 类型提示的示例。
 {: .prompt-danger }
 
@@ -95,10 +92,10 @@ Moon
 
 ## 表格（Tables）
 
-| 公司名称                     | 联系人           | 国家   |
-| ---------------------------- | ---------------- | ------ |
-| Alfreds Futterkiste          | Maria Anders     | 德国   |
-| Island Trading               | Helen Bennett    | 英国   |
+| 公司名称 | 联系人 | 国家 |
+| --- | --- | --- |
+| Alfreds Futterkiste | Maria Anders | 德国 |
+| Island Trading | Helen Bennett | 英国 |
 | Magazzini Alimentari Riuniti | Giovanni Rovelli | 意大利 |
 
 ------
@@ -191,28 +188,41 @@ gantt
 
 ### 默认样式（带说明文字）
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Desktop View](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/wp11830871-ubuntu-2204-wallpapers.jpg){: width="972" height="589" }
+{: .mt-0 }
 *全宽显示并居中对齐*
 
 ------
 
 ### 左对齐
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Desktop View](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/wp11830871-ubuntu-2204-wallpapers.jpg){: width="972" height="589" .w-75 .normal}
 
 ------
 
 ### 左浮动
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Desktop View](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/wp11830871-ubuntu-2204-wallpapers.jpg){: width="972" height="589" .w-50 .left}
-Ubuntu 22.04 LTS（Jammy Jellyfish)是一款长期支持版本，官方提供长达五年的安全更新与维护，适合服务器部署和日常开发使用。该版本默认内核更新、系统稳定性提升，并在性能与安全性之间取得了良好平衡。对于开发者而言，Ubuntu 22.04 在包管理、容器生态以及主流开发语言支持方面表现成熟，既适合作为本地开发环境，也适合运行在 WSL2、云服务器或虚拟化平台中，能够满足从学习到生产的多种使用场景。
+Ubuntu 22.04 LTS（Jammy Jellyfish）是一款长期支持版本，官方提供长达五年的安全更新与维护，
+适合服务器部署和日常开发使用。该版本默认内核更新、系统稳定性提升，并在性能与安全性之间取得了良好平衡。
+对于开发者而言，Ubuntu 22.04 在包管理、容器生态以及主流开发语言支持方面表现成熟，
+既适合作为本地开发环境，也适合运行在 WSL2、云服务器或虚拟化平台中，
+能够满足从学习到生产的多种使用场景。
 
 ------
 
 ### 右浮动
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Desktop View](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/wp11830871-ubuntu-2204-wallpapers.jpg){: width="972" height="589" .w-50 .right}
-Ubuntu 22.04 LTS（Jammy Jellyfish)是一款长期支持版本，官方提供长达五年的安全更新与维护，适合服务器部署和日常开发使用。该版本默认内核更新、系统稳定性提升，并在性能与安全性之间取得了良好平衡。对于开发者而言，Ubuntu 22.04 在包管理、容器生态以及主流开发语言支持方面表现成熟，既适合作为本地开发环境，也适合运行在 WSL2、云服务器或虚拟化平台中，能够满足从学习到生产的多种使用场景。
+Ubuntu 22.04 LTS（Jammy Jellyfish）是一款长期支持版本，官方提供长达五年的安全更新与维护，
+适合服务器部署和日常开发使用。该版本默认内核更新、系统稳定性提升，并在性能与安全性之间取得了良好平衡。
+对于开发者而言，Ubuntu 22.04 在包管理、容器生态以及主流开发语言支持方面表现成熟，
+既适合作为本地开发环境，也适合运行在 WSL2、云服务器或虚拟化平台中，
+能够满足从学习到生产的多种使用场景。
 
 ------
 
@@ -220,7 +230,9 @@ Ubuntu 22.04 LTS（Jammy Jellyfish)是一款长期支持版本，官方提供长
 
 下方图片会根据主题偏好自动切换深色 / 浅色模式，并带有阴影效果：
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![浅色模式](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/image-20251220222701253.png){: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+<!-- markdownlint-disable-next-line MD013 -->
 ![深色模式](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/image-20251220222411914.png){: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
 
 ------

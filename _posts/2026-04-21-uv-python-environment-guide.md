@@ -30,14 +30,16 @@ description: 本文系统讲解使用 uv 管理 Python 版本、环境与项目�
 
 ## 1. uv 简介
 
-`uv` 是由 Astral 开发的现代 Python 包管理器与项目管理工具，核心理念是“**项目即环境**”。相比传统的 `pip + venv` 组合，`uv` 提供了更快的安装速度、更可靠的环境隔离和更清晰的项目管理方式。
+`uv` 是由 Astral 开发的现代 Python 包管理器与项目管理工具，核心理念是”**项目即环境**”。
+相比传统的 `pip + venv` 组合，`uv` 提供了更快的安装速度、更可靠的环境隔离和更清晰
+的项目管理方式。
 
-| **动作** | **传统方式 (pip/venv)**         | **现代方式 (uv Project)**                     |
-| -------- | ------------------------------- | --------------------------------------------- |
-| 创建环境 | `python -m venv .venv`          | 无需手动创建，`uv run` 或 `uv add` 时自动生成 |
-| 记录包   | `pip freeze > requirements.txt` | **自动记录**在 `pyproject.toml` 和 `uv.lock`  |
-| 运行代码 | 必须先 `activate` 虚拟环境      | 直接 `uv run`，无需手动激活                   |
-| 切换版本 | 重新创建虚拟环境                | `uv python pin 3.x` 然后 `uv sync`            |
+| 动作 | 传统方式 (pip/venv) | 现代方式 (uv Project) |
+| --- | --- | --- |
+| 创建环境 | `python -m venv .venv` | 无需手动创建，`uv run` 或 `uv add` 时自动生成 |
+| 记录包 | `pip freeze > requirements.txt` | **自动记录**在 `pyproject.toml` 和 `uv.lock` |
+| 运行代码 | 必须先 `activate` 虚拟环境 | 直接 `uv run`，无需手动激活 |
+| 切换版本 | 重新创建虚拟环境 | `uv python pin 3.x` 然后 `uv sync` |
 
 ---
 
@@ -97,7 +99,9 @@ uv --version
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-安装脚本会自动将 `uv.exe` 放置到 `%USERPROFILE%\.local\bin`，并将该目录加入 **Path** 环境变量。重新打开 PowerShell 验证：
+安装脚本会自动将 `uv.exe` 放置到
+`%USERPROFILE%\.local\bin`，并将该目录加入 **Path** 环境变量。
+重新打开 PowerShell 验证：
 
 ```powershell
 uv --version
@@ -117,14 +121,15 @@ uv --version
 
 ### 2.3 Windows 自定义路径配置（可选）
 
-如果希望统一管理 `uv` 相关的缓存、Python 解释器和工具路径，可设置以下系统环境变量：
+如果希望统一管理 `uv` 相关的缓存、Python 解释器和工具路径，可设置以下系统环境
+变量：
 
-| **变量名**              | **变量值**                                | **作用**                                         |
-| ----------------------- | ----------------------------------------- | ------------------------------------------------ |
-| `UV_CACHE_DIR`          | `D:\uv_data\cache`                        | 包缓存目录，避免占用系统盘                       |
-| `UV_DEFAULT_INDEX`      | `https://mirrors.aliyun.com/pypi/simple/` | 国内镜像源，加速下载                             |
-| `UV_PYTHON_INSTALL_DIR` | `D:\uv_data\python`                       | `uv python install` 下载的 Python 解释器存放位置 |
-| `UV_TOOL_DIR`           | `D:\uv_data\tools`                        | `uv tool install` 安装的工具存放位置             |
+| 变量名 | 变量值 | 作用 |
+| --- | --- | --- |
+| `UV_CACHE_DIR` | `D:\uv_data\cache` | 包缓存目录，避免占用系统盘 |
+| `UV_DEFAULT_INDEX` | `https://mirrors.aliyun.com/pypi/simple/` | 国内镜像源，加速下载 |
+| `UV_PYTHON_INSTALL_DIR` | `D:\uv_data\python` | `uv python install` 下载的 Python 解释器存放位置 |
+| `UV_TOOL_DIR` | `D:\uv_data\tools` | `uv tool install` 安装的工具存放位置 |
 
 > **注意**：若使用 VPN，建议选择阿里云镜像源，因为部分大学镜像源可能会屏蔽海外节点。
 
@@ -234,6 +239,7 @@ uv run python
 
 ## 5. 用 uv 管理项目依赖
 
+<!-- markdownlint-disable-next-line MD013 -->
 > **官方文档参考**：[项目管理（Projects）](https://docs.astral.sh/uv/getting-started/projects/) · [依赖管理（Dependencies）](https://docs.astral.sh/uv/concepts/projects/dependencies/) · [命令行参考](https://docs.astral.sh/uv/reference/cli/)
 
 在 `uv` 项目模式下，应使用 `uv add` 而非 `uv pip install`。依赖会被自动写入 `pyproject.toml` 并更新 `uv.lock`。
@@ -491,13 +497,13 @@ uv run python --version
 
 本文各章节已嵌入对应的官方文档链接，方便随时查阅。以下为完整索引：
 
-| **主题**    | **对应章节** | **官方文档链接**                                                                                                                                                                                        |
-| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 安装        | 第 2 节      | [Installation](https://docs.astral.sh/uv/getting-started/installation/)                                                                                                                                 |
-| 镜像源      | 第 3 节      | [Indexes](https://docs.astral.sh/uv/concepts/indexes/) · [Environment Variables](https://docs.astral.sh/uv/reference/environment/)                                                                      |
-| Python 管理 | 第 4 节      | [Install Python](https://docs.astral.sh/uv/guides/install-python/)                                                                                                                                      |
-| 项目与依赖  | 第 5 节      | [Projects](https://docs.astral.sh/uv/getting-started/projects/) · [Dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/) · [CLI Reference](https://docs.astral.sh/uv/reference/cli/) |
-| GitHub 仓库 | —            | [astral-sh/uv](https://github.com/astral-sh/uv)                                                                                                                                                         |
+| 主题 | 对应章节 | 官方文档链接 |
+| --- | --- | --- |
+| 安装 | 第 2 节 | [Installation](https://docs.astral.sh/uv/getting-started/installation/) |
+| 镜像源 | 第 3 节 | [Indexes](https://docs.astral.sh/uv/concepts/indexes/) · [Environment Variables](https://docs.astral.sh/uv/reference/environment/) |
+| Python 管理 | 第 4 节 | [Install Python](https://docs.astral.sh/uv/guides/install-python/) |
+| 项目与依赖 | 第 5 节 | [Projects](https://docs.astral.sh/uv/getting-started/projects/) · [Dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/) · [CLI Reference](https://docs.astral.sh/uv/reference/cli/) |
+| GitHub 仓库 | — | [astral-sh/uv](https://github.com/astral-sh/uv) |
 
 > `uv` 更新频繁，如遇行为变化，建议以[官方文档首页](https://docs.astral.sh/uv/)为准。
 
@@ -508,6 +514,7 @@ uv run python --version
 1. **安装统一**：`uv` 支持在线脚本安装与离线包手动安装，Ubuntu 和 Windows 均有对应方案。
 2. **换源推荐**：优先将镜像源配置到项目 `pyproject.toml` 中（`default = true`），提升可复现性。
 3. **Python 管理**：使用 `uv python install/pin/list/which` 管理解释器，运行统一使用 `uv run python`。
-4. **依赖管理**：统一使用 `uv add / uv remove / uv sync`，将 `--dev` 与生产依赖分离，通过 `uv python pin` 锁定项目 Python 版本。
+4. **依赖管理**：统一使用 `uv add / uv remove / uv sync`，将 `--dev` 与生产依赖分离，
+   通过 `uv python pin` 锁定项目 Python 版本。
 5. **排查思路**：遇到命令冲突时，优先使用 `uv run` 绕过，再视情况配置系统别名。
 6. **官方文档**：`uv` 更新频繁，具体行为以[官方文档](https://docs.astral.sh/uv/)为准。

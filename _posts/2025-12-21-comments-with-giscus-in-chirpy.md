@@ -28,15 +28,10 @@ description: 本文演示在 Chirpy 博客中接入并配置 Giscus 评论系统
 在开始之前，请确认：
 
 1. ✅ 你的博客是 **GitHub Pages**
-    
 2. ✅ 博客仓库是 **public**
-    
-    - `OrangeSunrise/orangesunrise.github.io`
-        
+   - `OrangeSunrise/orangesunrise.github.io`
 3. ✅ 你使用的是 **Chirpy 主题**
-    
 4. ✅ 评论希望基于 **GitHub Discussions**
-    
 
 如果以上都满足，继续👇
 
@@ -49,15 +44,10 @@ description: 本文演示在 Chirpy 博客中接入并配置 Giscus 评论系统
 👉 `https://github.com/OrangeSunrise/orangesunrise.github.io`
 
 1. 点击 **Settings**
-    
 2. 滚动到 **Features**
-    
 3. 勾选 ✅ **Discussions**
-    
 4. 点击 **Set up discussions**
-    
 5. 使用默认分类即可（之后我们会用到）
-    
 
 ---
 
@@ -69,7 +59,7 @@ description: 本文演示在 Chirpy 博客中接入并配置 Giscus 评论系统
 
 ### 1️⃣ Repository
 
-```
+```text
 OrangeSunrise/orangesunrise.github.io
 ```
 
@@ -77,19 +67,19 @@ OrangeSunrise/orangesunrise.github.io
 
 选择一个分类，比如：
 
-```
+```text
 General
 ```
 
 ### 3️⃣ 映射方式（推荐）
 
-```
+```text
 Discussion ↔ Page pathname
 ```
 
 ### 4️⃣ 语言
 
-```
+```text
 Chinese (Simplified)
 ```
 
@@ -131,9 +121,9 @@ comments:
     lang: zh-CN
     reactions_enabled: 1
 ```
-    
-> - `repo_id` / `category_id` **必须和 giscus.app 给的一模一样**   
-> - 不能加引号    
+
+> - `repo_id` / `category_id` **必须和 giscus.app 给的一模一样**
+> - 不能加引号
 > - 缩进必须是 **2 个空格**
 > - `repo`替换为你自己的
 {: .prompt-warning }
@@ -155,23 +145,14 @@ git push
 ## 七、验证是否成功
 
 1. 打开任意一篇博客文章
-    
 2. 滚动到文章底部
-    
 3. 你应该能看到：
-    
-    - 💬 评论框
-        
-    - 👍 GitHub 表情反应
-        
-    - “Sign in with GitHub”
-        
+   - 💬 评论框
+   - 👍 GitHub 表情反应
+   - “Sign in with GitHub”
 
 如果看不到，常见原因：
 
 - Discussions 没开
-    
 - repo / repo_id 填错
-    
 - 仓库不是 public
-    

@@ -31,7 +31,8 @@ npm -v   # 应输出对应版本号
 
 ### 方式二：使用压缩包手动安装
 
-如果 GitHub 连接失败（如 `Connection reset by peer`），可以下载 `node-v24.x.x-linux-x64.tar.xz` 后手动安装。
+如果 GitHub 连接失败（如 `Connection reset by peer`），
+可以下载 `node-v24.x.x-linux-x64.tar.xz` 后手动安装。
 
 #### 1. 解压并安装
 
@@ -149,12 +150,12 @@ npm config set registry https://registry.npmjs.org/
 
 ### 常用镜像源
 
-| 源名称   | 地址                                              |
-| -------- | ------------------------------------------------- |
-| 官方默认 | `https://registry.npmjs.org/`                     |
-| 淘宝镜像 | `https://registry.npmmirror.com/`                 |
-| 腾讯云   | `https://mirrors.cloud.tencent.com/npm/`          |
-| 华为云   | `https://mirrors.huaweicloud.com/repository/npm/` |
+| 源名称 | 地址 |
+| --- | --- |
+| 官方默认 | `https://registry.npmjs.org/` |
+| 淘宝镜像 | `https://registry.npmmirror.com/` |
+| 腾讯云 | `https://mirrors.cloud.tencent.com/npm/` |
+| 华为云 | `https://mirrors.huaweicloud.com/repository/npm/` |
 
 ### 查看 npm 配置
 

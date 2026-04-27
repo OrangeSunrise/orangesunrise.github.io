@@ -7,7 +7,7 @@ categories: [博客, Chirpy]
 tags: [getting started]
 ---
 
-> 在本全面的概述中开始学习 Chirpy 的基础知识。您将学习如何安装、配置和使用您的第一个基于 Chirpy 的网站，以及如何将其部署到网络服务器上。
+在本全面的概述中开始学习 Chirpy 的基础知识。您将学习如何安装、配置和使用您的第一个基于 Chirpy 的网站，以及如何将其部署到网络服务器上。
 
 > 官方文章翻译版，版本：chirpy-7.4.1
 {: .prompt-info }
@@ -32,7 +32,7 @@ tags: [getting started]
 **如果你不熟悉 Jekyll 或不打算大量定制主题，不建议使用该方式。**
 
 1. 登录 GitHub。
-2. Fork 主题仓库：https://github.com/cotes2020/jekyll-theme-chirpy/fork
+2. Fork 主题仓库：<https://github.com/cotes2020/jekyll-theme-chirpy/fork>
 3. 将仓库命名为 `<username>.github.io`。
 
 ------
@@ -64,7 +64,8 @@ Dev Containers 基于 Docker 提供隔离的开发环境，避免与你本机系
 
 **步骤：**
 
-1. 按照 [Jekyll 官方安装文档](https://jekyllrb.com/docs/installation/) 安装 Jekyll，并确保已安装 [Git](https://git-scm.com/)。
+1. 按照 [Jekyll 官方安装文档](https://jekyllrb.com/docs/installation/)
+   安装 Jekyll，并确保已安装 [Git](https://git-scm.com/)。
 2. 将你的仓库克隆到本地。
 3. 如果你是 **Fork 主题仓库** 的方式：
    - 安装 [Node.js][nodejs]
@@ -79,9 +80,11 @@ Dev Containers 基于 Docker 提供隔离的开发环境，避免与你本机系
 
 在项目根目录执行：
 
+<!-- markdownlint-disable MD014 -->
 ```terminal
 $ bundle exec jekyll serve
 ```
+<!-- markdownlint-enable MD014 -->
 
 > 如果你使用的是 Dev Containers，必须在 **VS Code 的终端中** 执行该命令。
 {: .prompt-info }
@@ -123,8 +126,7 @@ $ bundle exec jekyll serve
 
 你可以根据站点部署地区的网络情况，替换其中的部分资源。
 
-如果你更倾向于**自托管静态资源**，可参考仓库：
-https://github.com/cotes2020/chirpy-static-assets
+如果你更倾向于**自托管静态资源**，可参考仓库：[chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets)
 
 ------
 
@@ -132,7 +134,9 @@ https://github.com/cotes2020/chirpy-static-assets
 
 在部署前，请确认 `_config.yml`{: .filepath} 中的 `url` 配置正确。
 
-如果你使用的是 **项目站点（project site）**，且没有使用自定义域名，或希望通过非 GitHub Pages 的 Web 服务器并使用子路径访问站点，请务必设置 `baseurl`，例如：
+如果你使用的是 **项目站点（project site）**，且没有使用自定义域名，
+或希望通过非 GitHub Pages 的 Web 服务器并使用子路径访问站点，
+请务必设置 `baseurl`，例如：
 
 ```text
 /project-name
@@ -150,9 +154,11 @@ https://github.com/cotes2020/chirpy-static-assets
 
 - 如果仓库中已提交 `Gemfile.lock`{: .filepath}，且你的本地环境不是 Linux，需要执行：
 
+  <!-- markdownlint-disable MD014 -->
   ```console
   $ bundle lock --add-platform x86_64-linux
   ```
+  <!-- markdownlint-enable MD014 -->
 
 然后配置 GitHub Pages：
 
@@ -172,15 +178,16 @@ https://github.com/cotes2020/chirpy-static-assets
 
 在项目根目录执行：
 
+<!-- markdownlint-disable MD014 -->
 ```console
 $ JEKYLL_ENV=production bundle exec jekyll b
 ```
+<!-- markdownlint-enable MD014 -->
 
 默认情况下，生成的静态文件位于 `_site`{: .filepath} 目录，将该目录内容上传到服务器即可。
 
 [nodejs]: https://nodejs.org/
 [starter]: https://github.com/cotes2020/chirpy-starter
-[pages-workflow-src]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
 [docker-engine]: https://docs.docker.com/engine/install/
 [vscode]: https://code.visualstudio.com/

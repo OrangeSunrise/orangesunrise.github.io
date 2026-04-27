@@ -8,17 +8,19 @@ render_with_liquid: false
 description: 本文介绍在 Chirpy 中创建与发布新文章的完整写作流程。
 ---
 
-> 本教程将指导你如何在 **Chirpy** 模板中编写一篇文章。即使你之前使用过 Jekyll，也非常值得阅读，因为 Chirpy 的许多功能都依赖于特定变量的正确设置。
+本教程将指导你如何在 **Chirpy** 模板中编写一篇文章。即使你之前使用过 Jekyll，也非常值得阅读，因为 Chirpy 的许多功能都依赖于特定变量的正确设置。
 
 > 官方文章翻译版，版本：chirpy-7.4.1
 {: .prompt-info }
 
 ## 命名与路径
 
+<!-- markdownlint-disable-next-line MD013 -->
 创建一个名为 `YYYY-MM-DD-TITLE.EXTENSION`{: .filepath} 的新文件，并将其放在项目根目录下的 `_posts`{: .filepath} 目录中。
 请注意，`EXTENSION`{: .filepath} 只能是 `md`{: .filepath} 或 `markdown`{: .filepath}。
 
-如果你想节省创建文件的时间，建议使用插件 [`Jekyll-Compose`](https://github.com/jekyll/jekyll-compose) 来完成这一操作。
+如果你想节省创建文件的时间，建议使用插件
+[`Jekyll-Compose`](https://github.com/jekyll/jekyll-compose) 来完成这一操作。
 
 ## Front Matter
 
@@ -38,7 +40,8 @@ tags: [TAG]     # 标签名应始终使用小写
 
 ### 日期的时区设置
 
-为了准确记录文章的发布时间，你不仅需要在 `_config.yml`{: .filepath} 中设置 `timezone`，还需要在文章 Front Matter 的 `date` 字段中指定时区。
+为了准确记录文章的发布时间，你不仅需要在 `_config.yml`{: .filepath} 中设置 `timezone`，
+还需要在文章 Front Matter 的 `date` 字段中指定时区。
 
 格式为：`+/-TTTT`，例如：`+0800`。
 
@@ -80,7 +83,11 @@ authors: [<author1_id>, <author2_id>]   # 多作者
 
 需要注意的是，`author` 字段同样可以指定多个作者。
 
-> 从 `_data/authors.yml`{: .filepath} 读取作者信息的好处是，页面中会生成 `twitter:creator` 的 meta 标签，这有助于丰富 [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution)，并提升 SEO 效果。
+> 从 `_data/authors.yml`{: .filepath} 读取作者信息的好处是，
+> 页面中会生成 `twitter:creator` 的 meta 标签，
+> 这有助于丰富
+> [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution)，
+> 并提升 SEO 效果。
 {: .prompt-info }
 
 ### 文章描述
@@ -295,12 +302,12 @@ image:
 
 以下表格展示了如何从给定的视频/音频 URL 中获取我们所需的两个参数，并且您还能了解到当前支持的视频平台。
 
-| Video URL                                                                                                                  | Platform   | ID                       |
-| -------------------------------------------------------------------------------------------------------------------------- | ---------- | :----------------------- |
-| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg)                         | `youtube`  | `H-B46URT4mg`            |
-| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211)                                 | `twitch`   | `1634779211`             |
-| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf)                         | `bilibili` | `BV1Q44y1B7Wf`           |
-| [https://www.open.**spotify**.com/track/**3OuMIIFP5TxM8tLXMWYPGV**](https://open.spotify.com/track/3OuMIIFP5TxM8tLXMWYPGV) | `spotify`  | `3OuMIIFP5TxM8tLXMWYPGV` |
+| Video URL | Platform | ID |
+| --- | --- | --- |
+| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube` | `H-B46URT4mg` |
+| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211) | `twitch` | `1634779211` |
+| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
+| [https://www.open.**spotify**.com/track/**3OuMIIFP5TxM8tLXMWYPGV**](https://open.spotify.com/track/3OuMIIFP5TxM8tLXMWYPGV) | `spotify` | `3OuMIIFP5TxM8tLXMWYPGV` |
 
 Spotify 还支持一些额外的参数：
 
@@ -414,21 +421,21 @@ Chirpy 支持以下提示类型：`tip`、`info`、`warning`、`danger`。
 
 使用三反引号即可创建代码块：
 
-~~~md
+````md
 ```
 这是一个纯文本代码块
 ```
-~~~
+````
 
 #### 指定代码语言（Specifying Language）
 
 使用 ````{language}` 的形式可以创建一个**带语法高亮**的代码块，例如：
 
-~~~markdown
+````markdown
 ```yaml
 key: value
 ```
-~~~
+````
 
 > 注意：Jekyll 自带的 `{% highlight %}` 标签 **不兼容** Chirpy 主题，请不要使用。
 {: .prompt-danger }
@@ -441,12 +448,12 @@ key: value
 
 如果你希望隐藏某个代码块的行号，可以为它添加 `nolineno` 类：
 
-~~~markdown
+````markdown
 ```shell
 echo 'No more line numbers!'
 ```
 {: .nolineno }
-~~~
+````
 
 ------
 
@@ -455,12 +462,12 @@ echo 'No more line numbers!'
 你可能已经注意到，代码块顶部默认显示的是**代码语言名称**。
 如果你希望将其替换为**文件名**，可以为代码块添加 `file` 属性：
 
-~~~markdown
+````markdown
 ```shell
 # content
 ```
 {: file="path/to/file" }
-~~~
+````
 
 这样，代码块顶部将显示文件路径或文件名，而不是语言类型。
 
@@ -470,7 +477,7 @@ echo 'No more line numbers!'
 
 如果你希望在文章中**原样显示 Liquid 代码**（而不是被 Jekyll 执行），需要使用 `{% raw %}` 和 `{% endraw %}` 将其包裹起来：
 
-~~~markdown
+````markdown
 {% raw %}
 ```liquid
 {% if product.title contains 'Pack' %}
@@ -478,7 +485,7 @@ echo 'No more line numbers!'
 {% endif %}
 ```
 {% endraw %}
-~~~
+````
 
 或者，你也可以在文章的 YAML 头信息中添加：
 
@@ -544,7 +551,7 @@ $$
 
 <!-- 行内公式（普通文本中），不需要空行 -->
 
-"Lorem ipsum dolor sit amet, $$ LaTeX_math_expression $$ consectetur adipiscing elit."
+"Lorem ipsum, $$ LaTeX_math_expression $$ consectetur adipiscing elit."
 
 <!-- 列表中的行内公式，需要转义第一个 `$` -->
 
@@ -587,4 +594,3 @@ mermaid: true
 如果你想深入了解 Jekyll 文章相关的更多细节，请参考官方文档：
 
 👉 [Jekyll Docs：Posts](https://jekyllrb.com/docs/posts/)
-

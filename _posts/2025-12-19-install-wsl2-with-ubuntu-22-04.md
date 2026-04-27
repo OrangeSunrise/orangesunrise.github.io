@@ -8,7 +8,8 @@ tags: [wsl2, ubuntu22.04]
 description: 本文介绍在 Windows 11 上离线安装 WSL2 与 Ubuntu 22.04 的步骤。
 ---
 
-> 本文记录在 **Windows 11** 环境下，通过 **离线方式** 安装 **WSL2 + Ubuntu 22.04**，并完成基础配置与 VS Code 联动，适合网络受限或希望可控安装流程的用户。
+> 本文记录在 **Windows 11** 环境下，通过 **离线方式** 安装 **WSL2 + Ubuntu 22.04**，
+> 并完成基础配置与 VS Code 联动，适合网络受限或希望可控安装流程的用户。
 
 ---
 
@@ -23,16 +24,18 @@ description: 本文介绍在 Windows 11 上离线安装 WSL2 与 Ubuntu 22.04 �
 > 建议将所有安装包统一放在 `Downloads` 目录，便于后续操作。
 {: .prompt-tip }
 
-------
+---
 
 ## 开启 CPU 虚拟化
 
 > 若该选项未开启，WSL2 将无法使用。
 {: .prompt-danger }
 
+<!-- markdownlint-disable MD013 MD033 -->
 <img src="https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/Pasted%20image%2020250403104942.png" alt="Pasted image 20250403104942" style="zoom: 50%;" />
+<!-- markdownlint-enable MD013 MD033 -->
 
-------
+---
 
 ## 启用 Windows 功能
 
@@ -43,9 +46,11 @@ description: 本文介绍在 Windows 11 上离线安装 WSL2 与 Ubuntu 22.04 �
 
 完成后 **重启电脑**。
 
+<!-- markdownlint-disable MD013 MD033 -->
 <img src="https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/Pasted%20image%2020250403105058.png" alt="Pasted image 20250403105058" style="zoom:80%;" />
+<!-- markdownlint-enable MD013 MD033 -->
 
-------
+---
 
 ## 安装 WSL（离线方式）
 
@@ -55,7 +60,7 @@ description: 本文介绍在 Windows 11 上离线安装 WSL2 与 Ubuntu 22.04 �
 
 访问 **Microsoft 官方 GitHub 发布页**：
 
-- https://github.com/microsoft/WSL/releases
+- <https://github.com/microsoft/WSL/releases>
 
 下载文件：
 
@@ -65,7 +70,7 @@ wsl-windows-x64.msi
 
 双击安装即可，整个过程通常非常迅速。
 
-------
+---
 
 ## 验证 WSL 版本
 
@@ -77,7 +82,7 @@ wsl -v
 
 确认 **WSL version = 2**。
 
-------
+---
 
 ## 安装 Ubuntu 22.04（离线）
 
@@ -92,12 +97,13 @@ curl -o wsl-distros.json https://raw.gitmirror.com/microsoft/WSL/master/distribu
 查看可用发行版：
 
 ```powershell
-Get-Content wsl-distros.json | ConvertFrom-Json | Select-Object -ExpandProperty Distributions
+Get-Content wsl-distros.json | ConvertFrom-Json |
+  Select-Object -ExpandProperty Distributions
 ```
 
 复制 **Ubuntu 22.04** 对应的下载地址，在浏览器中下载 `.appx` 文件。
 
-------
+---
 
 ### 安装发行版
 
@@ -117,13 +123,13 @@ ubuntu2204
 
 首次启动会进入初始化流程。
 
-------
+---
 
 ### 设置 Linux 用户名与密码
 
 根据提示创建默认用户，该用户将作为 WSL 中的日常使用账号。
 
-------
+---
 
 ### 配置 sudo 免密（可选）
 
@@ -142,13 +148,13 @@ sudo -E visudo
 
 保存退出即可生效。
 
-------
+---
 
 ## 与 VS Code 配合使用
 
 官方文档：
 
-- https://learn.microsoft.com/windows/wsl/tutorials/wsl-vscode
+- <https://learn.microsoft.com/windows/wsl/tutorials/wsl-vscode>
 
 ### 安装扩展
 
@@ -160,7 +166,7 @@ Remote Development
 
 安装完成后，即可通过 **WSL 连接 Ubuntu 环境** 进行开发。
 
-------
+---
 
 ## Ubuntu 基础配置
 
@@ -172,11 +178,11 @@ grep -v '^#' /etc/apt/sources.list.d/ubuntu.sources | grep -v '^$'
 
 ### 更换国内镜像源（推荐）
 
-- 清华大学镜像站：https://help.mirrors.cernet.edu.cn/ubuntu/
+- 清华大学镜像站：<https://help.mirrors.cernet.edu.cn/ubuntu/>
 
 根据官方说明替换内容。
 
-------
+---
 
 ### 更新系统
 
@@ -190,7 +196,7 @@ sudo apt-get update
 sudo apt-get install -y wget ca-certificates
 ```
 
-------
+---
 
 ## 完成 🎉
 

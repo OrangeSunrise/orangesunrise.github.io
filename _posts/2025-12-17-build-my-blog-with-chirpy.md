@@ -20,28 +20,32 @@ pin: true
 - [x] 本地 Markdown 文章编写与预览
 - [x] Git 推送自动部署
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Chirpy Blog Preview](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/image-20251217135521471.png){: w="1200" h="750" }
 _博客首页效果预览_
 
 ## 开发环境
 
-| 项目         | 版本 / 说明             |
-| ------------ | ----------------------- |
-| OS           | Windows 11              |
-| Linux 子系统 | WSL2 + Ubuntu 24.04     |
-| 编辑器       | VS Code                 |
-| git          | 在Ubuntu 24.04中安装git |
+| 项目 | 版本 / 说明 |
+| --- | --- |
+| OS | Windows 11 |
+| Linux 子系统 | WSL2 + Ubuntu 24.04 |
+| 编辑器 | VS Code |
+| git | 在 Ubuntu 24.04 中安装 git |
 
 ## 环境准备
 
 ### WSL2 + Ubuntu 24.04 + Git + VSCode
 
-安装教程：[链接](https://orangesunrise.github.io/posts/a-guide-to-installing-and-configuring-wsl2/ "点击跳转")
+安装教程：[链接][wsl2-guide]
+
+[wsl2-guide]: https://orangesunrise.github.io/posts/a-guide-to-installing-and-configuring-wsl2/ "点击跳转"
 
 ## 项目拉取
 
 > 下面内容来源于[Getting Started, Chirpy](https://chirpy.cotes.page/posts/getting-started/)
 
+<!-- markdownlint-disable MD013 -->
 ```html
 ## Creating a Site Repository
 
@@ -63,28 +67,28 @@ This approach is convenient for modifying features or UI design, but presents ch
 2. [Fork the theme repository](https://github.com/cotes2020/jekyll-theme-chirpy/fork).
 3. Name the new repository `<username>.github.io`, replacing `username` with your lowercase GitHub username.
 ```
+<!-- markdownlint-enable MD013 -->
 
 > **不要 fork 主题仓库**  
 > 👉 **用 Option 1：Use this template（Starter，推荐）**
 {: .prompt-warning }
 
-| 对比项     | ✅ Option 1：Use this template（**Recommended**） | ❌ Option 2：Fork 主题（不推荐） |
-| ---------- | ------------------------------------------------ | ------------------------------- |
-| 适合人群   | 写博客 / 文档站点的绝大多数人                    | 深度魔改主题的高级用户          |
-| 使用方式   | 基于官方模板创建仓库                             | Fork 官方主题仓库               |
-| 主题角色   | **作为依赖存在**                                 | **主题 = 你的项目本身**         |
-| 升级体验   | ⭐⭐⭐⭐⭐ 无痛升级（改版本 / 跟官方）                | ⭐ 痛苦（大量 merge 冲突）       |
-| 维护成本   | 很低                                             | 很高                            |
-| 仓库结构   | 干净，只关注内容                                 | 混杂主题源码                    |
-| 新功能跟进 | 非常容易                                         | 很困难                          |
-| 官方支持   | 完全匹配官方文档                                 | 很多文档不再适用                |
-| 翻车概率   | 极低                                             | 极高                            |
-| 后悔概率   | 😄 几乎没有                                       | 😭 **90% 会后悔**                |
+| 对比项 | ✅ Option 1：Use this template（**Recommended**） | ❌ Option 2：Fork 主题（不推荐） |
+| --- | --- | --- |
+| 适合人群 | 写博客 / 文档站点的绝大多数人 | 深度魔改主题的高级用户 |
+| 使用方式 | 基于官方模板创建仓库 | Fork 官方主题仓库 |
+| 主题角色 | **作为依赖存在** | **主题 = 你的项目本身** |
+| 升级体验 | ⭐⭐⭐⭐⭐ 无痛升级 | ⭐ 痛苦（大量 merge 冲突） |
+| 维护成本 | 很低 | 很高 |
+| 仓库结构 | 干净，只关注内容 | 混杂主题源码 |
+| 新功能跟进 | 非常容易 | 很困难 |
+| 官方支持 | 完全匹配官方文档 | 很多文档不再适用 |
+| 翻车概率 | 极低 | 极高 |
+| 后悔概率 | 😄 几乎没有 | 😭 **90% 会后悔** |
 
 > 整体流程只有一句话：
 > **先在 GitHub 上用模板创建仓库 → 再拉取到本地开发**
 {: .prompt-tip }
-
 > 不要反过来在本地新建仓库再推 GitHub。
 {: .prompt-warning }
 
@@ -106,7 +110,6 @@ Use this template → Create a new repository
 
 > 必须：1. 全小写；2. 和 GitHub 用户名一模一样
 {: .prompt-warning }
-
 > ✔ 这样 GitHub Pages 才能自动生效
 {: .prompt-info }
 
@@ -242,21 +245,19 @@ bundle exec jekyll serve
 > 后续每次写文章前，先本地预览确认效果正常，再推送到 GitHub。
 {: .prompt-tip }
 
-
-
 ## 核心配置文件一览
 
-| 序号 | 文件                   | 作用          |
-| ---- | ---------------------- | ------------- |
-| 1    | `_config.yml`          | 站点全局配置  |
-| 2    | `Gemfile`              | Ruby 依赖管理 |
-| 3    | `assets/img/favicons/` | 网站图标      |
-| 4    | `_data/locales/`       | 多语言配置    |
-| 5    | `_data/authors.yml`    | 作者信息      |
-| 6    | `_data/contact.yml`    | 联系方式      |
-| 7    | `_data/media.yml`      | 媒体类型      |
-| 8    | `_data/share.yml`      | 分享平台      |
-| 9    | `_posts/`              | 博客文章      |
+| 序号 | 文件 | 作用 |
+| --- | --- | --- |
+| 1 | `_config.yml` | 站点全局配置 |
+| 2 | `Gemfile` | Ruby 依赖管理 |
+| 3 | `assets/img/favicons/` | 网站图标 |
+| 4 | `_data/locales/` | 多语言配置 |
+| 5 | `_data/authors.yml` | 作者信息 |
+| 6 | `_data/contact.yml` | 联系方式 |
+| 7 | `_data/media.yml` | 媒体类型 |
+| 8 | `_data/share.yml` | 分享平台 |
+| 9 | `_posts/` | 博客文章 |
 
 ## 配置文件修改说明
 
@@ -264,6 +265,7 @@ bundle exec jekyll serve
 
 #### 修改的内容
 
+<!-- markdownlint-disable MD013 -->
 ```yml
 # 修改博客展示语言
 lang: zh-CN
@@ -340,9 +342,11 @@ comments:
     
 # 其余保持默认即可
 ```
+<!-- markdownlint-enable MD013 -->
 
 #### 修改后的文件
 
+<!-- markdownlint-disable MD013 -->
 ```yml
 # The Site Configuration
 
@@ -583,9 +587,11 @@ jekyll-archives:
     category: /categories/:name/
 
 ```
+<!-- markdownlint-enable MD013 -->
 
 ### Gemfile
 
+<!-- markdownlint-disable MD024 -->
 #### 修改的内容
 
 ```ruby
@@ -627,6 +633,7 @@ Chirpy 主题已预置完整的 favicon 结构，你只需要按照规范 **替�
 
 具体制作与替换方法可参考后续的 **Favicon 自定义教程**（此处暂时占位，后续补充链接）。
 
+<!-- markdownlint-disable-next-line MD013 -->
 ![Favicon Files Preview](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/assets/image-20251218134116353.png){: w="500" h="400" }
 _替换后的 favicon 文件列表_
 
@@ -636,8 +643,8 @@ _替换后的 favicon 文件列表_
 
 Chirpy 主题官方仓库已提供多语言支持文件，你可以直接从以下渠道获取：
 
-* **Chirpy 官方仓库**：下载对应语言的 `yml` 文件
-* **百度网盘**：[下载链接](https://pan.baidu.com/s/1SDgtnMOO6aI4vtU4yoNrDg?pwd=q4p3 "点击跳转")
+- **Chirpy 官方仓库**：下载对应语言的 `yml` 文件
+- **百度网盘**：[下载链接](https://pan.baidu.com/s/1SDgtnMOO6aI4vtU4yoNrDg?pwd=q4p3 "点击跳转")
 
 下载完成后，将所需语言文件放入 `_data/locales/` 目录，并在 `_config.yml` 中指定默认语言，即可生效。
 
@@ -646,6 +653,7 @@ Chirpy 主题官方仓库已提供多语言支持文件，你可以直接从以�
 
 ### authors.yml
 
+<!-- markdownlint-disable MD024 -->
 #### 修改的内容
 
 ```yml
@@ -690,6 +698,7 @@ sille_bille:
 
 ### contact.yml
 
+<!-- markdownlint-disable MD024 -->
 #### 修改的内容
 
 ```yml
@@ -710,6 +719,7 @@ sille_bille:
 
 #### 修改后的文件
 
+<!-- markdownlint-disable MD013 -->
 ```yml
 #  The contact options.
 
@@ -762,9 +772,11 @@ sille_bille:
 #   url: ''                   # Fill with your Threads profile link
 
 ```
+<!-- markdownlint-enable MD013 -->
 
 ### media.yml
 
+<!-- markdownlint-disable MD024 -->
 #### 修改的内容
 
 ```yml
@@ -797,6 +809,7 @@ sille_bille:
 
 ### share.yml
 
+<!-- markdownlint-disable MD024 -->
 #### 修改的内容
 
 ```yml
@@ -913,4 +926,3 @@ git push origin main
 - [Jekyll博客搭建教程（上篇），去以六月息](https://ittousei.github.io/posts/build-my-blog-1/)
 - [Jekyll博客搭建教程（下篇），去以六月息](https://ittousei.github.io/posts/build-my-blog-2/)
 - [Chirpy主题的进阶使用，去以六月息](https://ittousei.github.io/posts/customize-my-blog/)
-

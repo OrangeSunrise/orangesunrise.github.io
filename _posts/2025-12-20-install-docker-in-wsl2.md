@@ -8,7 +8,8 @@ tags: [wsl2, docker]
 description: 本文介绍在 WSL2 Ubuntu 环境安装 Docker 并完成可用性配置。
 ---
 
-> 本文基于 **WSL2 + Ubuntu 22.04** 环境，使用 **Docker 官方 apt 仓库** 安装 Docker Engine，并针对 **WSL2 中常见的 Docker Hub 访问失败问题** 给出稳定解决方案。
+> 本文基于 **WSL2 + Ubuntu 22.04** 环境，使用 **Docker 官方 apt 仓库** 安装 Docker Engine，
+> 并针对 **WSL2 中常见的 Docker Hub 访问失败问题** 给出稳定解决方案。
 
 ---
 
@@ -35,7 +36,7 @@ Ubuntu-22.04    Running 2
 wsl --set-version Ubuntu-22.04 2
 ```
 
-------
+---
 
 ### 2️⃣ 更新 Ubuntu 系统
 
@@ -46,14 +47,14 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-------
+---
 
 ## 二、安装 Docker（官方 apt 仓库方式）
 
 > **不要使用 `apt install docker.io`**，该包版本老且问题较多。
 {: .prompt-warning }
 
-------
+---
 
 ### 1️⃣ 安装依赖包
 
@@ -65,7 +66,7 @@ sudo apt install -y \
   lsb-release
 ```
 
-------
+---
 
 ### 2️⃣ 添加 Docker 官方 GPG Key
 
@@ -75,10 +76,11 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
 | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-------
+---
 
 ### 3️⃣ 添加 Docker 官方仓库
 
+<!-- markdownlint-disable MD013 -->
 ```bash
 echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
@@ -86,8 +88,9 @@ https://download.docker.com/linux/ubuntu \
 $(lsb_release -cs) stable" \
 | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+<!-- markdownlint-enable MD013 -->
 
-------
+---
 
 ### 4️⃣ 安装 Docker Engine
 
@@ -101,7 +104,7 @@ sudo apt install -y \
   docker-compose-plugin
 ```
 
-------
+---
 
 ## 三、启动 Docker（WSL 特有步骤）
 
@@ -117,7 +120,7 @@ sudo service docker start
 docker version
 ```
 
-------
+---
 
 ### 2️⃣ 运行测试容器
 
@@ -127,7 +130,7 @@ sudo docker run hello-world
 
 看到 `Hello from Docker!` 即表示 Docker Engine 工作正常 🎉
 
-------
+---
 
 ## 四、免 sudo 使用 Docker（强烈推荐）
 
@@ -154,7 +157,7 @@ docker ps
 
 无报错即表示配置成功。
 
-------
+---
 
 ## 五、Docker 自动启动（WSL 场景）
 
@@ -174,7 +177,7 @@ if ! pgrep dockerd > /dev/null; then
 fi
 ```
 
-------
+---
 
 ## 六、Docker Compose 使用说明
 
@@ -192,7 +195,7 @@ docker compose up -d
 
 > 不再使用旧命令 `docker-compose`。
 
-------
+---
 
 ## 七、常见问题：无法拉取镜像
 
@@ -211,7 +214,7 @@ dial tcp 31.13.69.245:443: connect: connection refused
 
 👉 **这是网络问题，不是 Docker 安装失败**。
 
-------
+---
 
 ## 八、解决方案：配置国内镜像加速器（推荐）
 
@@ -236,7 +239,7 @@ sudo nano /etc/docker/daemon.json
 }
 ```
 
-------
+---
 
 ### 3️⃣ 重启 Docker 服务
 
@@ -244,7 +247,7 @@ sudo nano /etc/docker/daemon.json
 sudo service docker restart
 ```
 
-------
+---
 
 ### 4️⃣ 再次测试
 
@@ -254,11 +257,13 @@ docker run hello-world
 
 在 **90% 的环境中，此步骤将直接成功**。
 
-------
+---
 
 ## 九、安装windows桌面版docker
 
-在 Windows 上使用 Docker，**Docker Desktop 是官方推荐方案**。它与 **WSL2 深度集成**，性能和使用体验都远好于早期的 Hyper-V 方案，非常适合本地开发、学习和测试环境。
+在 Windows 上使用 Docker，**Docker Desktop 是官方推荐方案**。
+它与 **WSL2 深度集成**，性能和使用体验都远好于早期的 Hyper-V 方案，
+非常适合本地开发、学习和测试环境。
 
 ### 安装前准备（务必检查）
 
@@ -289,13 +294,13 @@ Ubuntu-22.04    Running 2
 wsl --set-version Ubuntu-22.04 2
 ```
 
-------
+---
 
 ### 下载 Docker Desktop
 
 前往 Docker 官方下载页面：
 
-👉 https://www.docker.com/products/docker-desktop/
+👉 <https://www.docker.com/products/docker-desktop/>
 
 选择：
 
@@ -310,7 +315,7 @@ Docker Desktop Installer.exe
 > [百度网盘下载链接](https://pan.baidu.com/s/1ueq8ZrJR9ejKqyvQ6j1bvw?pwd=6d54 "点击跳转")
 {: .prompt-tip }
 
-------
+---
 
 ### 安装 Docker Desktop
 
@@ -330,7 +335,7 @@ Docker Desktop Installer.exe
 
 首次启动时间可能稍长，请耐心等待。
 
-------
+---
 
 ### Docker Desktop 基本配置（重要）
 
@@ -343,7 +348,7 @@ Docker Desktop Installer.exe
 
 点击 **Apply & Restart**
 
-------
+---
 
 #### 2️⃣ 验证 Docker 是否可用
 
@@ -363,7 +368,7 @@ docker run hello-world
 
 看到 `Hello from Docker!` 即表示安装成功 🎉
 
-------
+---
 
 ## 十、总结
 
@@ -373,4 +378,3 @@ docker run hello-world
 - ✅ 免 sudo 使用 Docker
 - ✅ Docker Compose 新版使用方式
 - ✅ WSL2 网络 / Docker Hub 访问问题解决
-

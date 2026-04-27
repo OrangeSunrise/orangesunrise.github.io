@@ -40,7 +40,6 @@ npm install -g @anthropic-ai/claude-code
 ## 方案2 使用qwen模型配置
 
 > [阿里云官方教程](https://help.aliyun.com/zh/model-studio/claude-code#2bc57cc37cxs2)
-
 > 这里以qwen 3.6 plus模型为例。
 
 ### 获取qwen模型api
@@ -57,7 +56,9 @@ npm install -g @anthropic-ai/claude-code
 
 ![image-20260409154012719](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199image-20260409154012719.png)
 
+<!-- markdownlint-disable MD013 MD033 -->
 <img src="https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199image-20260409154016421.png" alt="image-20260409154016421" style="zoom:50%;" />
+<!-- markdownlint-enable MD013 MD033 -->
 
 信息可填可不填，然后点击确定，一定要保存好api key，不要忘记了，最好放在记事本保存起来。
 
@@ -79,7 +80,7 @@ npm install -g @anthropic-ai/claude-code
    export ANTHROPIC_API_KEY="你的实际Key内容"
    export ANTHROPIC_MODEL=qwen3.6-plus
    ```
-   
+
 3. **保存并退出**：
 
    按 `Ctrl + O` 保存，按 `Enter` 确认，再按 `Ctrl + X` 退出。
@@ -131,25 +132,19 @@ claude
 
 初次使用 claude code 时，可能会强制要求登录 Anthropic 账户。请按以下步骤操作以跳过该流程：
 
+<!-- markdownlint-disable MD013 MD033 -->
 <img src="https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199p1049602.png" alt="img" style="zoom:80%;" />
-
-
-
+<!-- markdownlint-enable MD013 MD033 -->
 1. 定位用户主目录下的 `.claude.json` 文件，具体路径如下：
-
    - macOS / Linux: `~/.claude.json`
    - Windows: `C:\Users\%USERNAME%\.claude.json`
-
 2. 将`hasCompletedOnboarding` 字段的值设置为 `true`，如果没有这个字段添加即可
-
    ```json
    {
      "hasCompletedOnboarding": true
    }
    ```
-
 3. 保存文件，然后在新终端中重新运行 `claude`。
-
 4. 如果vscode的claude插件还是要求登录，将这个插件卸载重新安装，重新打开vscode即可。
 
    ```bash
@@ -163,7 +158,6 @@ claude
    ```
 
    删除`anthropic.claude-code-2.1.98-linux-x64/`这个文件夹。
-
 
 ### 更多配置模型的方式（可选）
 
@@ -215,7 +209,7 @@ Claude Code 支持以下模型配置方式，**按优先级从高到低排列**�
 
 ![image-20260409163051394](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199image-20260409163051394.png)
 
-**问题3：vscode中的claude插件需要登录**
+#### 问题3：vscode中的claude插件需要登录
 
 打开vscode中的claude插件设置选项：
 

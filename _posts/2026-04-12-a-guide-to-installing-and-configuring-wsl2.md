@@ -37,7 +37,7 @@ description: 本文提供 Win11 下 WSL2、Ubuntu、Git 与 VS Code 的安装配
 
 下载链接（百度网盘）：
 
-> 链接: https://pan.baidu.com/s/14u-k0jb--u51sifmsZednw?pwd=e8ys 提取码: e8ys
+> 链接: <https://pan.baidu.com/s/14u-k0jb--u51sifmsZednw?pwd=e8ys> 提取码: e8ys
 
 ![WSL2安装包](https://cloud-080910t-1316343199.cos.ap-beijing.myqcloud.com/cloud-080910t-1316343199/image-20260401100850736.png)
 
@@ -69,6 +69,7 @@ wsl --install --from-file D:\path\to\ubuntu-24.04.4-wsl-amd64.wsl --location D:\
 ```
 
 > 注意：
+>
 > - 将 `D:\path\to\...` 替换为 `.wsl` 文件的实际路径
 > - `--location` 指定虚拟磁盘存放目录，请确保该目录已创建
 
@@ -92,7 +93,7 @@ sudo vim /etc/apt/sources.list.d/ubuntu.sources
 
 替换为以下内容：
 
-```
+```text
 Types: deb
 URIs: https://mirrors.aliyun.com/ubuntu
 Suites: noble noble-updates noble-backports
@@ -113,7 +114,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-> 阿里云镜像站：https://developer.aliyun.com/mirror/ubuntu
+> 阿里云镜像站：<https://developer.aliyun.com/mirror/ubuntu>
 
 ### 3.3 配置 sudo 免密
 
@@ -123,7 +124,7 @@ sudo -E visudo
 
 在文件中找到 `%sudo ALL=(ALL:ALL) ALL` 所在行附近，添加：
 
-```
+```text
 your_username ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
@@ -184,7 +185,8 @@ ssh -T git@github.com
 
 首次连接时输入 `yes` 确认指纹。看到以下提示即表示成功：
 
-> Hi OrangeSunrise! You've successfully authenticated, but GitHub does not provide shell access.
+> Hi OrangeSunrise! You've successfully authenticated, but GitHub does not
+> provide shell access.
 
 ---
 
@@ -200,7 +202,7 @@ ssh -T git@github.com
 
 在有网络的环境中，将 `$COMMIT_ID` 替换为实际值后下载：
 
-```
+```text
 https://update.code.visualstudio.com/commit:$COMMIT_ID/server-linux-x64/stable
 ```
 
@@ -227,6 +229,7 @@ ls ~/.vscode-server/bin/$COMMIT_ID
 
 如果已有 Windows SSH 密钥，只需将公钥注入 Ubuntu：
 
+<!-- markdownlint-disable MD013 -->
 ```powershell
 # 在 Windows PowerShell 中运行
 
@@ -236,5 +239,6 @@ wsl bash -c "mkdir -p ~/.ssh && chmod 700 ~/.ssh"
 # 2. 将公钥追加到 authorized_keys（根据实际密钥类型选择文件）
 type $env:USERPROFILE\.ssh\id_ed25519.pub | wsl bash -c "cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
+<!-- markdownlint-enable MD013 -->
 
 > 如果使用的是 RSA 密钥，将 `id_ed25519.pub` 替换为 `id_rsa.pub`。
