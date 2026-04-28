@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# 🌸 樱花道上的清晨通学场景
+# 🌸 樱花道上通学场景
 >
 > ------
 >
