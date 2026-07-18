@@ -28,3 +28,7 @@ assets/js/dist
 
 # markdownlint config
 _posts/.markdownlint.json
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db
