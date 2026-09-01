@@ -168,8 +168,16 @@ export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple/"
 [[tool.uv.index]]
 name = "aliyun"
 url = "https://mirrors.aliyun.com/pypi/simple/"
+```
+
+```toml
+[[tool.uv.index]]
+name = "tuna"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 default = true
 ```
+
+两个镜像源任选一个作为默认源，`default = true` 的镜像源会在 `uv add` 时被优先使用。
 
 优点：配置随项目纳入版本控制，团队保持一致性，可复现性更强。
 
