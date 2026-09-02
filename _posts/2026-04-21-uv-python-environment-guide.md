@@ -173,7 +173,7 @@ url = "https://mirrors.aliyun.com/pypi/simple/"
 ```toml
 [[tool.uv.index]]
 name = "tuna"
-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 ```
 
